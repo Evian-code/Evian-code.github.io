@@ -1,6 +1,9 @@
 # Site settings
 title: 'Beta Lab'
 title_zh: 'Beta Lab'
+subtitle: "AI and Education Research Lab, Beta University"
+subtitle_zh: "人工智能与教育技术研究实验室"
+
 email: jiaoxinshan@std.uestc.edu.cn
 description: 'Advanced AI Research Laboratory at University'
 description_zh: '大学人工智能研究实验室'
