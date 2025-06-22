@@ -1,35 +1,38 @@
 <!-- header.html -->
-<header class="site-header">
-  <!-- 顶部 Logo 和 Lab 名称 -->
-  <div class="topbar">
-    <div class="container">
-      <div class="logo-section">
-        <img src="/assets/images/lab-logo.jpg" alt="Lab Logo" class="lab-logo">
-        <div class="lab-info">
-          <div class="lab-name">{% if page.lang == 'en' %}Beta Lab{% else %}Beta Lab{% endif %}</div>
-          <div class="lab-subtitle">人工智能与教育技术研究实验室</div>
-        </div>
-      </div>
+
+<!-- 顶部白色区域：Logo + 名称 + 副标题 -->
+<div style="background: white; padding: 1rem 2rem; display: flex; align-items: center; border-bottom: 1px solid #ccc;">
+  <img src="/assets/images/lab-logo.jpg" alt="Lab Logo" style="height: 60px; margin-right: 15px;">
+  <div>
+    <div style="font-size: 1.5rem; font-weight: bold; color: #cc7a00;">
+      {% if page.lang == 'en' %}{{ site.title }}{% else %}{{ site.title_zh }}{% endif %}
+    </div>
+    <div style="font-size: 0.9rem; color: #666;">
+      {% if page.lang == 'en' %}{{ site.subtitle }}{% else %}{{ site.subtitle_zh }}{% endif %}
     </div>
   </div>
+</div>
 
-  <!-- 导航栏 -->
-  <nav class="navbar">
-    <div class="container">
-      <div class="nav-links">
-        {% if page.lang == 'en' %}
-          {% for item in site.data.navigation.en %}
-            <a href="{{ item.url | relative_url }}">{{ item.name }}</a>
-          {% endfor %}
-        {% else %}
-          {% for item in site.data.navigation.zh %}
-            <a href="{{ item.url | relative_url }}">{{ item.name }}</a>
-          {% endfor %}
-        {% endif %}
-      </div>
-      <div class="language-switcher">
-        {% include language-switcher.html %}
-      </div>
+<!-- 下部蓝色导航栏 -->
+<div style="background-color: #3e5d7b;">
+  <div style="display: flex; align-items: center; flex-wrap: wrap; max-width: 1200px; margin: 0 auto; padding: 0.5rem 1rem;">
+    {% if page.lang == 'en' %}
+      {% for item in site.data.navigation.en %}
+        <a href="{{ item.url | relative_url }}" style="color: white; text-decoration: none; margin-right: 1.5rem;">
+          {{ item.name }}
+        </a>
+      {% endfor %}
+    {% else %}
+      {% for item in site.data.navigation.zh %}
+        <a href="{{ item.url | relative_url }}" style="color: white; text-decoration: none; margin-right: 1.5rem;">
+          {{ item.name }}
+        </a>
+      {% endfor %}
+    {% endif %}
+
+    <!-- 语言切换 -->
+    <div style="margin-left: auto;">
+      {% include language-switcher.html %}
     </div>
-  </nav>
-</header>
+  </div>
+</div>
