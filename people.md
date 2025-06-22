@@ -67,7 +67,7 @@ lang: zh
 </div>
 
 <div class="members-section">
-  <h2>研究生</h2>
+  <h2>博士生</h2>
   <div class="members-grid">
     {% for member in site.data.members.students %}
     <div class="member-card">
