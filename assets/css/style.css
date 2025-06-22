@@ -14,20 +14,3 @@
 .lang-link:hover {
   background-color: #f0f0f0;
 }
-
-.sidebar {
-  padding: 0 !important;
-  margin: 0 !important;
-  text-align: left !important;
-}
-.sidebar-block {
-  margin: 0 !important;
-  padding: 0 !important;
-}
-.sidebar-block ul {
-  padding-left: 0 !important;
-  margin-left: 0 !important;
-}
-.sidebar-block li {
-  margin-left: 0 !important;
-}
