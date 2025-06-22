@@ -13,8 +13,8 @@
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{% if page.lang == 'en' %}{{ site.description }}{% else %}{{ site.description_zh }}{% endif %}{% endif %}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
 
-  <!-- <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
-  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+  <!-- <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
    -->
   {% seo %}
 </head>
