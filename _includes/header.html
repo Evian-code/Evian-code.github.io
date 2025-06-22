@@ -1,6 +1,6 @@
-<header class="site-header" role="banner">
+<header class="header-full-width" role="banner">
   <div class="wrapper">
-      <div class="site-header-content">
+      <div class="header-full-width">
           <!-- 标题，根据语言显示不同名字，跳转不同首页 -->
           <a class="site-title" rel="author" href="{% if page.lang == 'en' %}/en/{% else %}/{% endif %}">
               {% if page.lang == 'en' %}{{ site.title }}{% else %}{{ site.title_zh }}{% endif %}

@@ -14,3 +14,16 @@
 .lang-link:hover {
   background-color: #f0f0f0;
 }
+
+.header-full-width, .footer-full-width {
+  width: 100%;
+  background-color: #0b4e8a; /* 自定义颜色 */
+  color: white;
+  padding: 10px 20px;
+}
+
+.header-full-width nav,
+.footer-full-width nav {
+  max-width: 1200px;
+  margin: 0 auto;
+}

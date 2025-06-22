@@ -1,7 +1,7 @@
 # Site settings
-title: 'AI Research Lab'
-title_zh: '人工智能研究实验室'
-email: lab@university.edu
+title: 'Beta Lab'
+title_zh: 'Beta Lab'
+email: jiaoxinshan@std.uestc.edu.cn
 description: 'Advanced AI Research Laboratory at University'
 description_zh: '大学人工智能研究实验室'
 baseurl: ''
