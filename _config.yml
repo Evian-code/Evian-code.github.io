@@ -31,7 +31,6 @@ exclude:
   - Gemfile.lock
   - README.md
 
-
 # Language settings
 languages: ['zh', 'en']
 default_lang: 'zh'

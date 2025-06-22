@@ -44,7 +44,8 @@
 
         <!-- 第二块：自动加载近期新闻 -->
         <section class="gray-block" style="background: #f2f2f2; padding: 1rem; border-radius: 6px;">
-          <h3>{% t home.news_title %}</h3>
+          <h3>{% if page.lang == 'en' %}Recent News{% else %}最新动态{% endif %}</h3>
+
           <ul>
             {% assign posts = site.posts | where_exp: "item", "item.lang == page.lang" | slice: 0, 3 %}
             {% for post in posts %}
