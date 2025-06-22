@@ -1,0 +1,53 @@
+# Site settings
+title: 'AI Research Lab'
+title_zh: '人工智能研究实验室'
+email: lab@university.edu
+description: 'Advanced AI Research Laboratory at University'
+description_zh: '大学人工智能研究实验室'
+baseurl: ''
+url: 'https://yourusername.github.io'
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: /:categories/:year/:month/:day/:title/
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: /:categories/:year/:month/:day/:title/
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Exclude files
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+
+# Language settings
+languages: ['zh', 'en']
+default_lang: 'zh'
+
+lab:
+  name: Beta Lab
+  name_zh: 测试实验室
+  address: 123 Innovation Road, City
+  phone: +86-10-12345678
+  email: contact@betalab.org
+  about_en: >
+    We are a research group focusing on AI, data science, and education technologies.
+  about_zh: >
+    我们是一个专注于人工智能、数据科学和教育技术的研究团队。
+description: Research in robotics, AI, and more.
+description_zh: 从事机器人、人工智能等方向研究。
+
+social:
+  github: yourgithub
+  twitter: yourtwitter
+  linkedin: yourlinkedin

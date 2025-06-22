@@ -1,0 +1,41 @@
+<footer class="site-footer h-card">
+  <data class="u-url" href="{{ '/' | relative_url }}"></data>
+  
+  <div class="wrapper">
+      <div class="footer-content">
+      
+          <div class="footer-col footer-col-1">
+              <h3>{% if page.lang == 'en' %}Contact{% else %}联系方式{% endif %}</h3>
+              <ul class="contact-list">
+                  <li>{% if page.lang == 'en' %}{{ site.lab.name }}{% else %}{{ site.lab.name_zh }}{% endif %}</li>
+                  <li>{{ site.lab.address }}</li>
+                  <li>{% if page.lang == 'en' %}Phone{% else %}电话{% endif %}: {{ site.lab.phone }}</li>
+                  <li>{% if page.lang == 'en' %}Email{% else %}邮箱{% endif %}: <a class="u-email" href="mailto:{{ site.lab.email }}">{{ site.lab.email }}</a></li>
+              </ul>
+          </div>
+          
+          <div class="footer-col footer-col-2">
+              <h3>{% if page.lang == 'en' %}Follow Us{% else %}关注我们{% endif %}</h3>
+              <ul class="social-media-list">
+                  {% if site.social.github %}
+                      <li><a href="https://github.com/{{ site.social.github }}" target="_blank"><i class="fab fa-github"></i> GitHub</a></li>
+                  {% endif %}
+                  {% if site.social.twitter %}
+                      <li><a href="https://twitter.com/{{ site.social.twitter }}" target="_blank"><i class="fab fa-twitter"></i> Twitter</a></li>
+                  {% endif %}
+                  {% if site.social.linkedin %}
+                      <li><a href="https://linkedin.com/in/{{ site.social.linkedin }}" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+                  {% endif %}
+              </ul>
+          </div>
+          
+          <div class="footer-col footer-col-3">
+              <p>{% if page.lang == 'en' %}{{ site.description }}{% else %}{{ site.description_zh }}{% endif %}</p>
+          </div>
+      </div>
+      
+      <div class="footer-bottom">
+          <p>&copy; {{ 'now' | date: "%Y" }} {% if page.lang == 'en' %}{{ site.lab.name }}{% else %}{{ site.lab.name_zh }}{% endif %}. {% if page.lang == 'en' %}All rights reserved.{% else %}版权所有。{% endif %}</p>
+      </div>
+  </div>
+</footer>

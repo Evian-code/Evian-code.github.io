@@ -1,0 +1,16 @@
+papers:
+  - title: 'Deep Learning for Medical Image Analysis'
+    title_zh: '医学图像分析的深度学习方法'
+    authors: 'Smith, J., Johnson, A.'
+    journal: 'IEEE Transactions on Medical Imaging'
+    year: 2024
+    doi: '10.1109/TMI.2024.12345'
+    pdf: '/assets/papers/smith2024deep.pdf'
+
+  - title: 'Efficient Neural Network Architectures'
+    title_zh: '高效神经网络架构'
+    authors: 'Johnson, A., Smith, J.'
+    journal: 'Nature Machine Intelligence'
+    year: 2023
+    doi: '10.1038/s42256-023-12345'
+    pdf: '/assets/papers/johnson2023efficient.pdf'

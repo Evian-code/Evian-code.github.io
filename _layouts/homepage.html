@@ -1,0 +1,49 @@
+<div class="homepage-layout" style="display: flex; gap: 2rem;">
+  <!-- Sidebar -->
+  <aside class="homepage-sidebar" style="flex: 1; min-width: 220px;">
+    <div class="sidebar-block">
+      <h3>{% if page.lang == 'en' %}Books{% else %}著作{% endif %}</h3>
+      <ul style="list-style: none; padding-left: 0;">
+        <li><img src="/assets/images/book1.jpg" alt="book1" style="width: 60px; vertical-align: middle;"> {% if page.lang == 'en' %}Introduction to Complex Networks{% else %}《复杂网络导论》{% endif %}</li>
+        <li><img src="/assets/images/book2.jpg" alt="book2" style="width: 60px; vertical-align: middle;"> {% if page.lang == 'en' %}Educational Data Mining{% else %}《教育数据挖掘》{% endif %}</li>
+      </ul>
+    </div>
+
+    <div class="sidebar-block">
+      <h3>{% if page.lang == 'en' %}Recent Publications{% else %}近期出版{% endif %}</h3>
+      <ul style="list-style: none; padding-left: 0;">
+        <li><a href="https://example.com/book1" target="_blank">{% if page.lang == 'en' %}Modeling of Complex Systems{% else %}《复杂系统建模导论》{% endif %}</a></li>
+        <li><a href="https://example.com/book2" target="_blank">{% if page.lang == 'en' %}Fundamentals of Educational Data Science{% else %}《教育数据科学基础》{% endif %}</a></li>
+      </ul>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="homepage-main" style="flex: 3;">
+    <!-- About section -->
+    <section class="gray-block" style="background: #f5f5f5; padding: 1rem; margin-bottom: 2rem; border-radius: 6px;">
+      <h2 style="margin-top: 0;">{% if page.lang == 'en' %}About Us{% else %}关于我们{% endif %}</h2>
+      <div style="display: flex; align-items: flex-start; gap: 1rem;">
+        <img src="/assets/images/professor.jpg" alt="PI Photo" style="width: 140px; border-radius: 6px;">
+        <p>
+          {% if page.lang == 'en' %}
+            {{ site.lab.about_en }}
+          {% else %}
+            {{ site.lab.about_zh }}
+          {% endif %}
+        </p>
+      </div>
+    </section>
+
+    <!-- News section -->
+    <section class="gray-block" style="background: #f5f5f5; padding: 1rem; border-radius: 6px;">
+      <h3 style="margin-top: 0;">{% if page.lang == 'en' %}Recent News{% else %}最新动态{% endif %}</h3>
+      <ul>
+        {% assign posts = site.posts | where_exp: "post", "post.lang == page.lang" | slice: 0, 3 %}
+        {% for post in posts %}
+          <li>📅 {{ post.date | date: "%Y-%m-%d" }}: <a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+        {% endfor %}
+      </ul>
+    </section>
+  </main>
+</div>

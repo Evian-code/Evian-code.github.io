@@ -1,0 +1,24 @@
+<!-- navigation.html -->
+<nav class="main-navigation" role="navigation">
+  <ul class="nav-list">
+      {% if page.lang == 'en' %}
+          {% for nav in site.data.navigation.en %}
+              <li class="nav-item">
+                  <a class="nav-link {% if page.url == nav.url %}active{% endif %}" 
+                     href="{{ nav.url | relative_url }}">
+                      {{ nav.name }}
+                  </a>
+              </li>
+          {% endfor %}
+      {% else %}
+          {% for nav in site.data.navigation.zh %}
+              <li class="nav-item">
+                  <a class="nav-link {% if page.url == nav.url %}active{% endif %}" 
+                     href="{{ nav.url | relative_url }}">
+                      {{ nav.name }}
+                  </a>
+              </li>
+          {% endfor %}
+      {% endif %}
+  </ul>
+</nav>

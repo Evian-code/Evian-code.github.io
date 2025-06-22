@@ -1,0 +1,19 @@
+faculty:
+  - name: 'Dr. John Smith'
+    name_zh: '约翰·史密斯 博士'
+    position: 'Principal Investigator'
+    position_zh: '首席研究员'
+    email: 'john.smith@university.edu'
+    bio: 'Dr. Smith specializes in machine learning and artificial intelligence.'
+    bio_zh: '史密斯博士专长于机器学习和人工智能。'
+    image: '/assets/images/john-smith.jpg'
+
+students:
+  - name: 'Alice Johnson'
+    name_zh: '爱丽丝·约翰逊'
+    position: 'PhD Student'
+    position_zh: '博士研究生'
+    email: 'alice.johnson@university.edu'
+    bio: 'Alice is working on deep learning applications in computer vision.'
+    bio_zh: '爱丽丝专注于深度学习在计算机视觉中的应用。'
+    image: '/assets/images/alice-johnson.jpg'

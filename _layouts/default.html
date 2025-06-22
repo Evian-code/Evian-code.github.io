@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.default_lang | default: 'zh' }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>
+    {% if page.title %}{{ page.title }} - {% endif %}
+    {% if page.lang == 'en' %}{{ site.title }}{% else %}{{ site.title_zh }}{% endif %}
+  </title>
+
+  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{% if page.lang == 'en' %}{{ site.description }}{% else %}{{ site.description_zh }}{% endif %}{% endif %}">
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
+
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+  
+  {% seo %}
+</head>
+
+<body>
+  <div class="wrapper">
+
+    {% include header.html %}
+
+    <!-- 可选：语言切换按钮位置 -->
+    <div class="language-switcher" style="text-align: right; padding: 0.5rem 1rem;">
+      {% include language-switcher.html %}
+    </div>
+
+    <div class="home-container" style="display: flex; gap: 2rem; padding: 1rem;">
+      
+      <!-- 左侧栏 -->
+      <aside class="sidebar" style="width: 25%;">
+        {% include sidebar.html %}
+      </aside>
+
+      <!-- 主体内容 -->
+      <main class="main-content" style="flex: 1; display: flex; flex-direction: column; gap: 2rem;">
+        <!-- 第一块：实验室简介 -->
+        <section class="gray-block" style="background: #f2f2f2; padding: 1rem; border-radius: 6px;">
+          {{ content }}
+        </section>
+
+        <!-- 第二块：自动加载近期新闻 -->
+        <section class="gray-block" style="background: #f2f2f2; padding: 1rem; border-radius: 6px;">
+          <h3>{% t home.news_title %}</h3>
+          <ul>
+            {% assign posts = site.posts | where_exp: "item", "item.lang == page.lang" | slice: 0, 3 %}
+            {% for post in posts %}
+              <li><a href="{{ post.url | relative_url }}">{{ post.date | date: "%Y-%m-%d" }} — {{ post.title }}</a></li>
+            {% endfor %}
+          </ul>
+        </section>
+      </main>
+
+    </div>
+
+    {% include footer.html %}
+
+  </div>
+
+  <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+</body>
+</html>

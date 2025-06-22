@@ -1,0 +1,12 @@
+areas:
+  - title: 'Machine Learning'
+    title_zh: '机器学习'
+    description: 'Advanced algorithms for pattern recognition and data analysis.'
+    description_zh: '用于模式识别和数据分析的先进算法。'
+    image: '/assets/images/ml-research.jpg'
+
+  - title: 'Computer Vision'
+    title_zh: '计算机视觉'
+    description: 'Image processing and visual recognition systems.'
+    description_zh: '图像处理和视觉识别系统。'
+    image: '/assets/images/cv-research.jpg'

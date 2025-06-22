@@ -1,0 +1,9 @@
+<div class="language-switcher">
+  {% assign current_url = page.url | relative_url %}
+
+  {% if page.lang == 'en' %}
+      <a href="{{ current_url | replace: '/en/', '/' }}" class="lang-link">中文</a>
+  {% else %}
+      <a href="/en{{ current_url }}" class="lang-link">English</a>
+  {% endif %}
+</div>
