@@ -14,3 +14,83 @@
 .lang-link:hover {
   background-color: #f0f0f0;
 }
+
+/* Header 通用容器 */
+.full-header {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+}
+
+/* 上方部分：Logo + 实验室名称 */
+.header-top {
+  background: #fff;
+  padding: 15px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.header-container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.lab-logo {
+  width: 60px;
+  height: auto;
+  margin-right: 16px;
+}
+
+.lab-title-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.site-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #003366;
+  text-decoration: none;
+}
+
+.lab-subtitle {
+  font-size: 14px;
+  color: #666;
+  margin-top: 4px;
+}
+
+/* 下方部分：导航 */
+.header-nav {
+  background-color: #3c5a78;
+}
+
+.header-nav .header-container {
+  flex-wrap: wrap;
+}
+
+.trigger {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.page-link {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 10px 0;
+}
+
+.page-link:hover {
+  text-decoration: underline;
+}
+
+/* 汉堡菜单隐藏（桌面端默认） */
+.nav-trigger,
+.nav-icon-label {
+  display: none;
+}
+
+/* 响应式处理略，需时可添加 */
