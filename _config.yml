@@ -26,9 +26,11 @@ plugins:
 
 # Exclude files
 exclude:
+  - vendor
   - Gemfile
   - Gemfile.lock
   - README.md
+
 
 # Language settings
 languages: ['zh', 'en']
