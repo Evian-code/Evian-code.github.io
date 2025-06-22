@@ -1,6 +1,6 @@
 <div class="homepage-layout" style="display: flex; gap: 2rem;">
   <!-- Sidebar -->
-  <aside class="homepage-sidebar" style="flex: 1; min-width: 220px;">
+  <!-- <aside class="homepage-sidebar" style="flex: 1; min-width: 220px;">
     <div class="sidebar-block">
       <h3>{% if page.lang == 'en' %}Books{% else %}著作{% endif %}</h3>
       <ul style="list-style: none; padding-left: 0;">
@@ -16,7 +16,7 @@
         <li><a href="https://example.com/book2" target="_blank">{% if page.lang == 'en' %}Fundamentals of Educational Data Science{% else %}《教育数据科学基础》{% endif %}</a></li>
       </ul>
     </div>
-  </aside>
+  </aside> -->
 
   <!-- Main Content -->
   <main class="homepage-main" style="flex: 3;">
@@ -24,7 +24,7 @@
     <section class="gray-block" style="background: #f5f5f5; padding: 1rem; margin-bottom: 2rem; border-radius: 6px;">
       <h2 style="margin-top: 0;">{% if page.lang == 'en' %}About Us{% else %}关于我们{% endif %}</h2>
       <div style="display: flex; align-items: flex-start; gap: 1rem;">
-        <img src="/assets/images/professor.jpg" alt="PI Photo" style="width: 140px; border-radius: 6px;">
+        <img src="/assets/images/zhoutao.jpg" alt="PI Photo" style="width: 140px; border-radius: 6px;">
         <p>
           {% if page.lang == 'en' %}
             {{ site.lab.about_en }}

@@ -6,7 +6,7 @@ faculty:
     email: 'john.smith@university.edu'
     bio: 'Dr. Smith specializes in machine learning and artificial intelligence.'
     bio_zh: '史密斯博士专长于机器学习和人工智能。'
-    image: '/assets/images/john-smith.jpg'
+    image: '/assets/images/zhoutao.jpg'
 
 students:
   - name: 'Alice Johnson'
@@ -16,4 +16,4 @@ students:
     email: 'alice.johnson@university.edu'
     bio: 'Alice is working on deep learning applications in computer vision.'
     bio_zh: '爱丽丝专注于深度学习在计算机视觉中的应用。'
-    image: '/assets/images/alice-johnson.jpg'
+    image: '/assets/images/biyilin.jpg'
