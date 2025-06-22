@@ -1,18 +1,50 @@
+<!-- 著作 Section -->
 <div class="sidebar-block">
-  <h3>Recommended Tool</h3>
+  <aside class="homepage-sidebar" style="flex: 1; min-width: 220px;">
+    <div class="sidebar-block">
+      <h3>{% if page.lang == 'en' %}Books{% else %}著作{% endif %}</h3>
+      <ul style="list-style: none; padding-left: 0;">
+        <li><img src="/assets/images/book1.jpg" alt="book1" style="width: 60px; vertical-align: middle;"> {% if page.lang == 'en' %}Introduction to Complex Networks{% else %}《复杂网络导论》{% endif %}</li>
+        <li><img src="/assets/images/book2.jpg" alt="book2" style="width: 60px; vertical-align: middle;"> {% if page.lang == 'en' %}Educational Data Mining{% else %}《教育数据挖掘》{% endif %}</li>
+      </ul>
+    </div>
 
+    <div class="sidebar-block">
+      <h3>{% if page.lang == 'en' %}Recent Publications{% else %}近期出版{% endif %}</h3>
+      <ul style="list-style: none; padding-left: 0;">
+        <li><a href="https://example.com/book1" target="_blank">{% if page.lang == 'en' %}Modeling of Complex Systems{% else %}《复杂系统建模导论》{% endif %}</a></li>
+        <li><a href="https://example.com/book2" target="_blank">{% if page.lang == 'en' %}Fundamentals of Educational Data Science{% else %}《教育数据科学基础》{% endif %}</a></li>
+      </ul>
+    </div>
+  </aside>
+</div>
+<!-- <div class="sidebar-block">
+  <h3>{% if page.lang == 'en' %}Books{% else %}著作{% endif %}</h3>
   <ul style="list-style: none; padding-left: 0;">
-    <li style="display: flex; align-items: center; margin-bottom: 0.8rem;">
-      <img src="/assets/images/book1.jpg" alt="复杂网络导论" style="width: 48px; height: auto; margin-right: 0.8rem; border-radius: 4px;">
-      <a href="https://book.douban.com/subject/30345617/" target="_blank" style="text-decoration: none; color: inherit;">
-        《复杂网络导论》
-      </a>
+    <li style="display: flex; align-items: center; margin-bottom: 10px;">
+      <img src="/assets/images/book1.jpg" alt="book1" style="width: 60px; height: auto; margin-right: 10px; border-radius: 4px;">
+      <span>{% if page.lang == 'en' %}Introduction to Complex Networks{% else %}《复杂网络导论》{% endif %}</span>
     </li>
-    <li style="display: flex; align-items: center; margin-bottom: 0.8rem;">
-      <img src="/assets/images/book2.jpg" alt="教育数据挖掘" style="width: 48px; height: auto; margin-right: 0.8rem; border-radius: 4px;">
-      <a href="https://book.douban.com/subject/27198470/" target="_blank" style="text-decoration: none; color: inherit;">
-        《教育数据挖掘》
-      </a>
+    <li style="display: flex; align-items: center; margin-bottom: 10px;">
+      <img src="/assets/images/book2.jpg" alt="book2" style="width: 60px; height: auto; margin-right: 10px; border-radius: 4px;">
+      <span>{% if page.lang == 'en' %}Educational Data Mining{% else %}《教育数据挖掘》{% endif %}</span>
     </li>
   </ul>
 </div>
+
+<!-- 近期出版 Section -->
+<div class="sidebar-block">
+  <h3>{% if page.lang == 'en' %}Recent Publications{% else %}近期出版{% endif %}</h3>
+  <ul style="list-style: none; padding-left: 0;">
+    <li style="margin-bottom: 8px;">
+      <a href="https://example.com/book1" target="_blank" style="text-decoration: none; color: #0366d6;">
+        {% if page.lang == 'en' %}Modeling of Complex Systems{% else %}《复杂系统建模导论》{% endif %}
+      </a>
+    </li>
+    <li style="margin-bottom: 8px;">
+      <a href="https://example.com/book2" target="_blank" style="text-decoration: none; color: #0366d6;">
+        {% if page.lang == 'en' %}Fundamentals of Educational Data Science{% else %}《教育数据科学基础》{% endif %}
+      </a>
+    </li>
+  </ul>
+</div> -->
