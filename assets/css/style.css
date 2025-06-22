@@ -15,51 +15,68 @@
   background-color: #f0f0f0;
 }
 
-/* Header 通用容器 */
-.full-header {
-  width: 100vw;
-  margin-left: calc(-50vw + 50%);
+/* 顶部条样式 */
+.topbar {
+  background-color: #ffffff;
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid #ccc;
 }
 
-/* 上方部分：Logo + 实验室名称 */
-.header-top {
-  background: #fff;
-  padding: 15px 0;
-  border-bottom: 1px solid #ddd;
-}
-
-.header-container {
-  max-width: 1140px;
-  margin: 0 auto;
-  padding: 0 16px;
+.logo-section {
   display: flex;
   align-items: center;
-  justify-content: space-between;
 }
 
 .lab-logo {
-  width: 60px;
-  height: auto;
-  margin-right: 16px;
+  width: 50px;
+  height: 50px;
+  border-radius: 4px;
+  margin-right: 1rem;
 }
 
-.lab-title-block {
-  display: flex;
-  flex-direction: column;
-}
-
-.site-title {
-  font-size: 24px;
+.lab-info .lab-name {
+  font-size: 1.4rem;
   font-weight: bold;
   color: #003366;
-  text-decoration: none;
 }
 
-.lab-subtitle {
-  font-size: 14px;
+.lab-info .lab-subtitle {
+  font-size: 0.9rem;
   color: #666;
-  margin-top: 4px;
 }
+
+/* 导航栏样式 */
+.navbar {
+  background-color: #3c5a77;
+  padding: 0.5rem 1rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  margin-right: 1rem;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+.language-switcher {
+  background-color: #fff;
+  color: #3c5a77;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
 
 /* 下方部分：导航 */
 .header-nav {
