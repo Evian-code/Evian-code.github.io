@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.default_lang | default: 'zh' }}">
-  {% include header.html %}
+{% include header.html %}
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -58,5 +58,6 @@
   </div>
 
   <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
 </body>
 </html>

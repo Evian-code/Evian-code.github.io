@@ -1,9 +1,8 @@
-<!-- header.html -->
-<div style="background: white; border-bottom: 1px solid #ccc;">
-  <div style="max-width: 1200px; margin: 0 auto; padding: 1rem 2rem; display: flex; align-items: center; justify-content: flex-start;">
-    <img src="/assets/images/logo.jpg" alt="Lab Logo" style="height: 60px; margin-right: 15px;">
-    <div style=" margin-right: 854px;">
-      <div style="font-size: 1.8rem; font-weight: bold; color: #cc7a00;">
+<div class="header-top">
+  <div class="header-logo">
+    <img src="/assets/images/logo.jpg" alt="Lab Logo">
+    <div class="header-logo-text">
+      <div style="font-size: 1.5rem; font-weight: bold; color: #cc7a00;">
         {% if page.lang == 'en' %}{{ site.title }}{% else %}{{ site.title_zh }}{% endif %}
       </div>
       <div style="font-size: 0.9rem; color: #666;">
@@ -13,27 +12,17 @@
   </div>
 </div>
 
+<div class="navbar">
+  {% if page.lang == 'en' %}
+    {% for item in site.data.navigation.en %}
+      <a href="{{ item.url | relative_url }}">{{ item.name }}</a>
+    {% endfor %}
+  {% else %}
+    {% for item in site.data.navigation.zh %}
+      <a href="{{ item.url | relative_url }}">{{ item.name }}</a>
+    {% endfor %}
+  {% endif %}
 
-<!-- 下部蓝色导航栏 -->
-<div style="background-color: #3e5d7b;">
-  <div style="display: flex; align-items: center; flex-wrap: wrap; max-width: 1200px; margin: 0 auto; padding: 0.5rem 1rem;">
-    {% if page.lang == 'en' %}
-      {% for item in site.data.navigation.en %}
-        <a href="{{ item.url | relative_url }}" style="color: white; text-decoration: none; margin-right: 1.5rem;">
-          {{ item.name }}
-        </a>
-      {% endfor %}
-    {% else %}
-      {% for item in site.data.navigation.zh %}
-        <a href="{{ item.url | relative_url }}" style="color: white; text-decoration: none; margin-right: 1.5rem;">
-          {{ item.name }}
-        </a>
-      {% endfor %}
-    {% endif %}
-
-    <!-- 语言切换 -->
-    <div style="margin-left: auto;">
-      {% include language-switcher.html %}
-    </div>
-  </div>
+  <!-- 语言切换 -->
+  {% include language-switcher.html %}
 </div>
