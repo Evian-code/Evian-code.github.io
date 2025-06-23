@@ -1,28 +1,34 @@
+<!-- header.html -->
+
+<!-- 顶部白色区域：Logo + 名称 -->
 <div class="header-top">
   <div class="header-logo">
     <img src="/assets/images/logo.jpg" alt="Lab Logo">
     <div class="header-logo-text">
-      <div style="font-size: 1.5rem; font-weight: bold; color: #cc7a00;">
+      <div class="lab-title">
         {% if page.lang == 'en' %}{{ site.title }}{% else %}{{ site.title_zh }}{% endif %}
       </div>
-      <div style="font-size: 0.9rem; color: #666;">
+      <div class="lab-subtitle">
         {% if page.lang == 'en' %}{{ site.subtitle }}{% else %}{{ site.subtitle_zh }}{% endif %}
       </div>
     </div>
   </div>
 </div>
 
+<!-- 下方蓝色导航栏 -->
 <div class="navbar">
   {% if page.lang == 'en' %}
     {% for item in site.data.navigation.en %}
-      <a href="{{ item.url | relative_url }}">{{ item.name }}</a>
+      <a class="page-link" href="{{ item.url | relative_url }}">{{ item.name }}</a>
     {% endfor %}
   {% else %}
     {% for item in site.data.navigation.zh %}
-      <a href="{{ item.url | relative_url }}">{{ item.name }}</a>
+      <a class="page-link" href="{{ item.url | relative_url }}">{{ item.name }}</a>
     {% endfor %}
   {% endif %}
 
   <!-- 语言切换 -->
-  {% include language-switcher.html %}
+  <div class="language-switcher">
+    {% include language-switcher.html %}
+  </div>
 </div>
