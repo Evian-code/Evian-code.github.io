@@ -1,7 +1,6 @@
 <!-- header.html -->
-<div class="site-header" style="width: 100vw; margin-left: calc(-50vw + 50%);">
-
-  <!-- 顶部白色区域：Logo + 实验室名称 -->
+<header class="full-header">
+  <!-- 顶部白色区域 -->
   <div class="header-top">
     <div class="wrapper header-logo">
       <img src="/assets/images/logo.jpg" alt="Lab Logo">
@@ -17,8 +16,8 @@
   </div>
 
   <!-- 下方蓝色导航栏 -->
-  <div class="header-nav">
-    <div class="wrapper navbar">
+  <div class="navbar">
+    <div class="wrapper">
       {% if page.lang == 'en' %}
         {% for item in site.data.navigation.en %}
           <a class="page-link" href="{{ item.url | relative_url }}">{{ item.name }}</a>
@@ -28,11 +27,9 @@
           <a class="page-link" href="{{ item.url | relative_url }}">{{ item.name }}</a>
         {% endfor %}
       {% endif %}
-
-      <!-- 语言切换 -->
       <div class="language-switcher">
         {% include language-switcher.html %}
       </div>
     </div>
   </div>
-</div>
+</header>
