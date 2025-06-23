@@ -23,17 +23,28 @@
     <!-- About section -->
     <section class="gray-block" style="background: #f5f5f5; padding: 1rem; margin-bottom: 2rem; border-radius: 6px;">
       <h2 style="margin-top: 0;">{% if page.lang == 'en' %}About Us{% else %}关于我们{% endif %}</h2>
-      <div style="display: flex; align-items: flex-start; gap: 1rem;">
-        <img src="/assets/images/zhoutao.jpg" alt="PI Photo" style="width: 140px; border-radius: 6px;">
-        <p>
-          {% if page.lang == 'en' %}
-            {{ site.lab.about_en }}
-          {% else %}
-            {{ site.lab.about_zh }}
-          {% endif %}
-        </p>
+    
+      <div style="display: flex; align-items: flex-start; gap: 1rem; flex-wrap: nowrap;">
+        
+        <!-- 左边：头像和名字 -->
+        <div style="flex: 0 0 140px; text-align: center;">
+          <img src="/assets/images/zhoutao.jpg" alt="PI Photo" style="width: 140px; border-radius: 6px;">
+          <div style="margin-top: 0.5rem; font-weight: bold;">张教授</div>
+        </div>
+    
+        <!-- 右边：介绍文字 -->
+        <div style="flex: 1;">
+          <p style="margin: 0;">
+            {% if page.lang == 'en' %}
+              {{ site.lab.about_en }}
+            {% else %}
+              {{ site.lab.about_zh }}
+            {% endif %}
+          </p>
+        </div>
       </div>
     </section>
+    
 
     <!-- News section -->
     <section class="gray-block" style="background: #f2f2f2; padding: 1rem; border-radius: 6px;">
