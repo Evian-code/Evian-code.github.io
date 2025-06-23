@@ -113,7 +113,7 @@
   border-radius: 8px;
 }
 
-. {
+.header-logo-text {
   display: flex;
   flex-direction: column;
 }
