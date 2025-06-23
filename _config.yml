@@ -1,14 +1,14 @@
 # Site settings
 title: 'Beta Lab'
 title_zh: 'Beta Lab'
-subtitle: "AI and Education Research Lab, Beta University"
-subtitle_zh: "电子科技大学大数据中心"
+subtitle: 'Bigdata Research Center of UESTC'
+subtitle_zh: '电子科技大学大数据研究中心'
 
 email: jiaoxinshan@std.uestc.edu.cn
-description: 'Advanced AI Research Laboratory at University'
-description_zh: '大学人工智能研究实验室'
+# description: 'Advanced AI Research Laboratory at University'
+# description_zh: '大学人工智能研究实验室'
 baseurl: ''
-url: 'https://yourusername.github.io'
+url: 'https://Evian-code.github.io'
 
 # Build settings
 markdown: kramdown
@@ -40,18 +40,16 @@ default_lang: 'zh'
 
 lab:
   name: Beta Lab
-  name_zh: 测试实验室
-  address: 123 Innovation Road, City
-  phone: +86-10-12345678
-  email: contact@betalab.org
+  name_zh: Beta Lab
+  address: 成都市高新区（西区）西源大道2006号, 电子科技大学清水河校区创新中心B318
+  phone: +86 17394988380
+  email: jiaoxinshan@std.uestc.edu.cn
   about_en: >
-    We are a research group focusing on AI, data science, and education technologies.
+    We are a research group focusing on complexity science and education science.
   about_zh: >
-    我们是一个专注于人工智能、数据科学和教育技术的研究团队。
-description: Research in robotics, AI, and more.
-description_zh: 从事机器人、人工智能等方向研究。
+    我们是一个专注于复杂性科学和教育科学的研究团队。
+description: Research in complexity science, education science, and related fields.
+description_zh: 从事复杂性科学,教育科学等方向研究。
 
 social:
-  github: yourgithub
-  twitter: yourtwitter
-  linkedin: yourlinkedin
+  Website: https://evian-code.github.io/
