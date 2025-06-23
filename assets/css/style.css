@@ -39,7 +39,7 @@
 }
 
 .sidebar-block h3 {
-  font-size: 1.2rem;
+  font-size: 1.6rem;
   margin-bottom: 0.8rem;
   color: #333;
 }
@@ -48,6 +48,7 @@
   list-style: none;
   padding: 0;
   margin: 0;
+  color:dimgray;
 }
 
 .sidebar-block li {
@@ -112,13 +113,13 @@
   border-radius: 8px;
 }
 
-.header-logo-text {
+. {
   display: flex;
   flex-direction: column;
 }
 
 .header-logo-text .lab-title {
-  font-size: 1.6rem;
+  font-size: 2 rem;
   font-weight: 700;
   color: #2a2a2a;
 }
