@@ -1,5 +1,6 @@
 <!-- header.html -->
 <header class="full-header">
+
   <!-- 顶部白色区域 -->
   <div class="header-top">
     <div class="wrapper header-logo">
@@ -27,9 +28,11 @@
           <a class="page-link" href="{{ item.url | relative_url }}">{{ item.name }}</a>
         {% endfor %}
       {% endif %}
+
       <div class="language-switcher">
         {% include language-switcher.html %}
       </div>
     </div>
   </div>
+
 </header>
