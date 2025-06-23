@@ -24,17 +24,16 @@
     <div style="display: grid; grid-template-columns: auto 1fr; gap: 1.5rem; align-items: start;">
       <!-- 头像左 -->
       <div style="display: flex;">
-        <img src="/assets/images/zhoutao.jpg" alt="张教授" style="float: left; margin-right: 20px;">
+        <img src="/assets/images/zhoutao.jpg" alt="张教授" style="width: 180px; border-radius: 8px;float: left; margin-right: 20px;">
+          {% if page.lang == 'en' %}
+            {{ site.lab.about_en }}
+          {% else %}
+            {{ site.lab.about_zh }}
+          {% endif %}
       </div>
     
       <!-- 文字右 -->
-      <div style="line-height: 1.75; font-size: 1rem; color: #333; padding-top: 0.25rem; text-align: left;">
-        {% if page.lang == 'en' %}
-          {{ site.lab.about_en }}
-        {% else %}
-          {{ site.lab.about_zh }}
-        {% endif %}
-      </div>
+
     </div>
     
     <p>
