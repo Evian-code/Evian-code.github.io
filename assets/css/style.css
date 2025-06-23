@@ -1,3 +1,10 @@
+/* ===== 公共设置 ===== */
+
+.language-switcher {
+  text-align: right;
+  margin-top: 1rem;
+  margin-left: auto;
+}
 
 .lang-link {
   font-weight: bold;
@@ -11,11 +18,14 @@
   background-color: #f0f0f0;
 }
 
-/* Header 通用容器 */
+/* ===== Header 区域 ===== */
+
 .full-header {
   width: 100vw;
   margin-left: calc(-50vw + 50%);
 }
+
+/* 上部：Logo + 标题 */
 
 .header-top {
   background: white;
@@ -34,6 +44,11 @@
   height: 60px;
 }
 
+.header-logo-text {
+  display: flex;
+  flex-direction: column;
+}
+
 .header-logo-text .lab-title {
   font-size: 1.5rem;
   font-weight: bold;
@@ -45,7 +60,10 @@
   color: #666;
 }
 
-.navbar {
+/* 下部：导航 */
+
+.navbar,
+.header-nav {
   background-color: #3e5d7b;
   padding: 0.5rem 1rem;
   display: flex;
@@ -55,23 +73,77 @@
   justify-content: flex-start;
 }
 
-.navbar a {
+.navbar a,
+.page-link {
   color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 10px 0;
+}
+
+.navbar a:hover,
+.page-link:hover {
+  text-decoration: underline;
+}
+
+/* 汉堡菜单默认隐藏 */
+
+.nav-trigger,
+.nav-icon-label {
+  display: none;
+}
+
+/* ===== 新闻卡片样式 ===== */
+
+.news-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.news-card {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  flex: 1 1 calc(33.333% - 1rem);
+  min-width: 220px;
+  max-width: 300px;
+  transition: transform 0.2s;
+}
+
+.news-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.news-date {
+  font-size: 0.9rem;
+  color: #888;
+  margin-bottom: 0.5rem;
+}
+
+.news-title a {
+  color: #0366d6;
+  font-weight: bold;
   text-decoration: none;
 }
 
-.language-switcher {
-  margin-left: auto;
+.news-title a:hover {
+  text-decoration: underline;
 }
 
-/* 响应式调整 */
+/* ===== 响应式优化 ===== */
+
 @media screen and (max-width: 768px) {
   .header-logo {
     flex-direction: column;
     align-items: flex-start;
   }
 
-  .navbar {
+  .navbar,
+  .header-nav {
     flex-direction: column;
     align-items: flex-start;
   }
@@ -79,5 +151,9 @@
   .language-switcher {
     margin-left: 0;
     margin-top: 0.5rem;
+  }
+
+  .news-card {
+    flex: 1 1 100%;
   }
 }
