@@ -309,4 +309,107 @@
   }
 }
 
+/* 成员 */
+/* 成员整体布局 */
+.members-section {
+  margin: 3rem auto;
+  max-width: 1140px;
+  padding: 0 16px;
+}
 
+.members-section h2 {
+  font-size: 1.5rem;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+/* 网格容器：一行最多4个，少于4个居中 */
+.members-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* 居中对齐 */
+  gap: 1.5rem;
+}
+
+/* 单个成员卡片 */
+.member-card {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  padding: 1rem;
+  width: calc(25% - 1.5rem); /* 一行4个 */
+  box-sizing: border-box;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 图片 */
+.member-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 0.75rem;
+}
+
+/* 名字与职位 */
+.member-name {
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-bottom: 0.25rem;
+}
+
+.member-position {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+/* 简介最多显示三行，超出省略 */
+.member-bio {
+  font-size: 0.9rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* 邮箱样式 */
+.member-email {
+  font-size: 0.85rem;
+  margin-bottom: 0.25rem;
+}
+
+.member-email a {
+  color: #0366d6;
+  text-decoration: none;
+}
+
+.member-email a:hover {
+  text-decoration: underline;
+}
+
+/* 响应式：平板每行3个，手机每行1个 */
+@media screen and (max-width: 992px) {
+  .member-card {
+    width: calc(33.333% - 1.5rem);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .member-card {
+    width: calc(50% - 1.5rem);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .member-card {
+    width: 100%;
+  }
+}
