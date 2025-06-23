@@ -43,18 +43,20 @@
         {% assign posts = site.posts | where_exp: "item", "item.lang == page.lang" | slice: 0, 3 %}
         {% for post in posts %}
           <div class="news-card">
-            {% if post.image %}
-              <div class="news-image">
-                <img src="{{ post.image | relative_url }}" alt="{{ post.title }}">
-              </div>
-            {% endif %}
+            <div class="news-image">
+              <img src="{% if post.image %}{{ post.image | relative_url }}{% else %}/assets/img/zhourao.jpg{% endif %}" alt="{{ post.title }}">
+            </div>
             <div class="news-date">{{ post.date | date: "%Y-%m-%d" }}</div>
-            <div class="news-title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></div>
+            <div class="news-title">
+              <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+            </div>
           </div>
         {% endfor %}
       </div>
+    
       <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
     </section>
+    
     
   </main>
 </div>
