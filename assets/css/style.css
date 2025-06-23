@@ -17,6 +17,65 @@
   background-color: #f0f0f0;
 }
 
+/* ===== 首页布局整体 ===== */
+.homepage-layout {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+/* ===== 侧边栏 ===== */
+.homepage-sidebar {
+  flex: 1;
+  min-width: 220px;
+}
+
+.sidebar-block {
+  background-color: #f9f9f9;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+}
+
+.sidebar-block h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.8rem;
+  color: #333;
+}
+
+.sidebar-block ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-block li {
+  margin-bottom: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.sidebar-block img {
+  width: 60px;
+  height: auto;
+  border-radius: 4px;
+}
+
+/* ===== 响应式：小屏幕下上下堆叠布局 ===== */
+@media screen and (max-width: 768px) {
+  .homepage-layout {
+    flex-direction: column;
+  }
+
+  .homepage-sidebar {
+    width: 100%;
+  }
+}
+
+
 /* ===== Header 区域 ===== */
 
 .full-header {
