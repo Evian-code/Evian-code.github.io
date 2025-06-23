@@ -78,16 +78,6 @@
   gap: 1rem;
   justify-content: flex-start;
 }
-/* 导航项右边距 */
-.navbar .page-link {
-  margin-right: 1.5rem;
-}
-
-/* 语言切换按钮居右并留出空隙 */
-.language-switcher {
-  margin-left: auto;
-  padding-left: 1rem;
-}
 
 .navbar a,
 .page-link {
@@ -100,6 +90,15 @@
 .navbar a:hover,
 .page-link:hover {
   text-decoration: underline;
+}
+
+.navbar .page-link {
+  margin-right: 1.5rem;
+}
+
+.language-switcher {
+  margin-left: auto;
+  padding-left: 1rem;
 }
 
 /* 汉堡菜单默认隐藏 */
