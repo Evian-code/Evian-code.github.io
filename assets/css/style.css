@@ -2,7 +2,7 @@
 
 .language-switcher {
   text-align: right;
-  margin-top: 1rem;
+  /* margin-top: 1rem; */
   margin-left: auto;
 }
 
@@ -95,11 +95,11 @@
 .navbar .page-link {
   margin-right: 1.5rem;
 }
-
+/* 
 .language-switcher {
   margin-left: auto;
   padding-left: 1rem;
-}
+} */
 
 /* 汉堡菜单默认隐藏 */
 
