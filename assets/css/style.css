@@ -119,7 +119,7 @@
 }
 
 .header-logo-text .lab-title {
-  font-size: 1.2 rem;
+  font-size: 1.6rem;
   font-weight: 700;
   color: #2a2a2a;
 }
@@ -168,35 +168,35 @@
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
-  justify-content: space-between;
+  justify-content: flex-start; /* 左对齐 */
 }
 
 .news-card {
   background: white;
   border-radius: 6px;
   padding: 1rem;
-  flex: 1 1 calc(33.333% - 1rem);
   box-sizing: border-box;
-  max-width: calc(33.333% - 1rem);
+
+  /* 一行最多 4 个卡片 */
+  flex: 1 1 calc(25% - 1rem);
+  max-width: calc(25% - 1rem);
 }
 
-.news-image img {
-  width: 100%;
-  height: auto;
-  border-radius: 4px;
-  margin-bottom: 0.5rem;
+/* 可选：小屏自动调整 */
+@media screen and (max-width: 1024px) {
+  .news-card {
+    flex: 1 1 calc(50% - 1rem);
+    max-width: calc(50% - 1rem);
+  }
 }
 
-.news-date {
-  font-size: 0.875rem;
-  color: #777;
+@media screen and (max-width: 600px) {
+  .news-card {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
 }
 
-.news-title a {
-  font-weight: bold;
-  text-decoration: none;
-  color: #333;
-}
 
 /* ===== Footer 样式 ===== */
 
