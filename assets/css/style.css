@@ -118,11 +118,19 @@
   flex-direction: column;
 }
 
-.header-logo-text .lab-title {
+/* .header-logo-text .lab-title {
   font-size: 1.6rem;
   font-weight: 700;
   color: #2a2a2a;
+} */
+
+.header-logo-text .lab-title {
+  font-size: 2.2rem; /* 更大的字体大小 */
+  font-weight: 700;
+  font-family: "Garamond", "Georgia", serif; /* 更有质感的字体 */
+  color: #2a2a2a;
 }
+
 
 .header-logo-text .lab-subtitle {
   font-size: 0.95rem;
