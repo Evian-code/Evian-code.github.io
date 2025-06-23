@@ -6,19 +6,6 @@ lang: zh
 
 <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 
-<!-- 可选：你可以把 script 放到 layout 中统一引入 -->
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    document.querySelectorAll(".bio-toggle").forEach(function (btn) {
-      btn.addEventListener("click", function () {
-        const bio = this.previousElementSibling;
-        bio.classList.toggle("expanded");
-        this.textContent = bio.classList.contains("expanded") ? "收起简介" : "展开全部简介";
-      });
-    });
-  });
-</script>
-
 <div class="members-section">
   <h2>教师</h2>
   <div class="members-grid">
@@ -38,4 +25,15 @@ lang: zh
   </div>
 </div>
 
-<!-- 你可以同样给博士生、硕士生加 toggle，省略内容只示例教师部分 -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const buttons = document.querySelectorAll(".bio-toggle");
+    buttons.forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        const bio = this.previousElementSibling;
+        bio.classList.toggle("expanded");
+        this.textContent = bio.classList.contains("expanded") ? "收起简介" : "展开全部简介";
+      });
+    });
+  });
+</script>
