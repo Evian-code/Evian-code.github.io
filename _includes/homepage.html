@@ -2,7 +2,7 @@
   <!-- Sidebar -->
   <aside class="homepage-sidebar" style="flex: 1; min-width: 220px;">
     <div class="sidebar-block">
-      <h3 style="text-align: center; margin-top: 0;">{% if page.lang == 'en' %}Books{% else %}著作{% endif %}</h3>
+      <h3 style="text-align: left; margin-top: 0;">{% if page.lang == 'en' %}Books{% else %}著作{% endif %}</h3>
       <ul style="list-style: none;">
         <li><img src="/assets/images/book1.jpg" alt="book1" style="width: 60px; vertical-align: middle;"> {% if page.lang == 'en' %}Introduction to Complex Networks{% else %}《复杂网络导论》{% endif %}</li>
         <li><img src="/assets/images/book2.jpg" alt="book2" style="width: 60px; vertical-align: middle;"> {% if page.lang == 'en' %}Educational Data Mining{% else %}《教育数据挖掘》{% endif %}</li>
@@ -21,20 +21,12 @@
   <!-- Main Content -->
   <main class="homepage-main" style="flex: 3;">
     <!-- About section -->
-      <!-- 头像左 -->
         <img src="/assets/images/zhoutao.jpg" alt="张教授" style="width: 180px; border-radius: 8px;float: left; margin-right: 20px;">
           {% if page.lang == 'en' %}
             {{ site.lab.about_en }}
           {% else %}
             {{ site.lab.about_zh }}
           {% endif %}
-    
-      <!-- 文字右 -->
-    
-    <p>
-      <img src="/assets/images/zhoutao.jpg" alt="示例图片" style="width: 180px; float: left; margin-right: 20px;">
-      这是一段环绕图片的文本。你可以继续写更多的文本内容，这些文本会自动环绕在图片的周围。
-    </p>
 
     <!-- News section -->
     <section class="gray-block" style="background: #f2f2f2; padding: 1rem; border-radius: 6px;">
