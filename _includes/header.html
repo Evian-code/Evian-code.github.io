@@ -1,34 +1,38 @@
 <!-- header.html -->
+<div class="site-header" style="width: 100vw; margin-left: calc(-50vw + 50%);">
 
-<!-- 顶部白色区域：Logo + 名称 -->
-<div class="header-top">
-  <div class="header-logo">
-    <img src="/assets/images/logo.jpg" alt="Lab Logo">
-    <div class="header-logo-text">
-      <div class="lab-title">
-        {% if page.lang == 'en' %}{{ site.title }}{% else %}{{ site.title_zh }}{% endif %}
-      </div>
-      <div class="lab-subtitle">
-        {% if page.lang == 'en' %}{{ site.subtitle }}{% else %}{{ site.subtitle_zh }}{% endif %}
+  <!-- 顶部白色区域：Logo + 实验室名称 -->
+  <div class="header-top">
+    <div class="wrapper header-logo">
+      <img src="/assets/images/logo.jpg" alt="Lab Logo">
+      <div class="header-logo-text">
+        <div class="lab-title">
+          {% if page.lang == 'en' %}{{ site.title }}{% else %}{{ site.title_zh }}{% endif %}
+        </div>
+        <div class="lab-subtitle">
+          {% if page.lang == 'en' %}{{ site.subtitle }}{% else %}{{ site.subtitle_zh }}{% endif %}
+        </div>
       </div>
     </div>
   </div>
-</div>
 
-<!-- 下方蓝色导航栏 -->
-<div class="navbar">
-  {% if page.lang == 'en' %}
-    {% for item in site.data.navigation.en %}
-      <a class="page-link" href="{{ item.url | relative_url }}">{{ item.name }}</a>
-    {% endfor %}
-  {% else %}
-    {% for item in site.data.navigation.zh %}
-      <a class="page-link" href="{{ item.url | relative_url }}">{{ item.name }}</a>
-    {% endfor %}
-  {% endif %}
+  <!-- 下方蓝色导航栏 -->
+  <div class="header-nav">
+    <div class="wrapper navbar">
+      {% if page.lang == 'en' %}
+        {% for item in site.data.navigation.en %}
+          <a class="page-link" href="{{ item.url | relative_url }}">{{ item.name }}</a>
+        {% endfor %}
+      {% else %}
+        {% for item in site.data.navigation.zh %}
+          <a class="page-link" href="{{ item.url | relative_url }}">{{ item.name }}</a>
+        {% endfor %}
+      {% endif %}
 
-  <!-- 语言切换 -->
-  <div class="language-switcher">
-    {% include language-switcher.html %}
+      <!-- 语言切换 -->
+      <div class="language-switcher">
+        {% include language-switcher.html %}
+      </div>
+    </div>
   </div>
 </div>
