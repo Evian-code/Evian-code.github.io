@@ -413,3 +413,33 @@
     width: 100%;
   }
 }
+/* 简介默认显示三行 */
+.member-bio {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  transition: all 0.3s ease;
+  margin-bottom: 0.5rem;
+}
+
+/* 展开时取消限制 */
+.member-bio.expanded {
+  -webkit-line-clamp: unset;
+  max-height: none;
+}
+
+/* 按钮样式 */
+.bio-toggle {
+  background: none;
+  border: none;
+  color: #007acc;
+  cursor: pointer;
+  font-size: 0.9rem;
+  padding: 0;
+  margin-bottom: 0.5rem;
+}
+
+.bio-toggle:hover {
+  text-decoration: underline;
+}
