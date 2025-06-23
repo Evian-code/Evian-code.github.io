@@ -93,4 +93,43 @@
   display: none;
 }
 
-/* 响应式处理略，需时可添加 */
+/* 近期新闻卡片 */
+.news-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.news-card {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  flex: 1 1 calc(33.333% - 1rem);
+  min-width: 220px;
+  max-width: 300px;
+  transition: transform 0.2s;
+}
+
+.news-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.news-date {
+  font-size: 0.9rem;
+  color: #888;
+  margin-bottom: 0.5rem;
+}
+
+.news-title a {
+  color: #0366d6;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.news-title a:hover {
+  text-decoration: underline;
+}
+

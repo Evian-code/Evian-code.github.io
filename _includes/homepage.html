@@ -36,7 +36,7 @@
     </section>
 
     <!-- News section -->
-    <section class="gray-block" style="background: #f5f5f5; padding: 1rem; border-radius: 6px;">
+    <!-- <section class="gray-block" style="background: #f5f5f5; padding: 1rem; border-radius: 6px;">
       <h3 style="margin-top: 0;">{% if page.lang == 'en' %}Recent News{% else %}最新动态{% endif %}</h3>
       <ul>
         {% assign posts = site.posts | where_exp: "post", "post.lang == page.lang" | slice: 0, 3 %}
@@ -44,6 +44,20 @@
           <li>📅 {{ post.date | date: "%Y-%m-%d" }}: <a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
         {% endfor %}
       </ul>
+    </section> -->
+    <section class="gray-block" style="background: #f2f2f2; padding: 1rem; border-radius: 6px;">
+      <h3>最新动态</h3>
+    
+      <div class="news-card-container">
+        {% assign posts = site.posts | where_exp: "item", "item.lang == page.lang" | slice: 0, 3 %}
+        {% for post in posts %}
+          <div class="news-card">
+            <div class="news-date">{{ post.date | date: "%Y-%m-%d" }}</div>
+            <div class="news-title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></div>
+          </div>
+        {% endfor %}
+      </div>
     </section>
+    
   </main>
 </div>
