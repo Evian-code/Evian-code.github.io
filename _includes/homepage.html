@@ -21,23 +21,27 @@
   <!-- Main Content -->
   <main class="homepage-main" style="flex: 3;">
     <!-- About section -->
-    <div style="display: grid; grid-template-columns: auto 1fr; gap: 1.5rem; align-items: start;">
-      <!-- 头像左 -->
-      <div style="display: flex;">
-        <img src="/assets/images/zhoutao.jpg" alt="张教授" style="width: 180px; border-radius: 8px;">
-      </div>
-    
-      <!-- 文字右 -->
-      <div style="line-height: 1.75; font-size: 1rem; color: #333; padding-top: 0.25rem; text-align: left;">
-        {% if page.lang == 'en' %}
-          {{ site.lab.about_en }}
-        {% else %}
-          {{ site.lab.about_zh }}
-        {% endif %}
+    <div class="about-section wrapper">
+      <div class="about-content">
+        <div class="about-image">
+          <img src="/assets/images/profile.jpg" alt="实验室负责人">
+        </div>
+        <div class="about-text">
+          <h2>关于我们</h2>
+          <p>
+            Betalab是一支充满活力与创新精神的研究团队，专注于复杂系统与教育科学领域的前沿研究。目前实验室拥有两名在读博士生和多名研究助理，团队结构合理、协作紧密，具备出色的跨学科研究能力。
+
+            实验室的研究方向涵盖高阶网络、链路预测等复杂性科学问题，以及教育科学中的学习行为建模与教育系统优化等。Betalab注重理论研究与实践应用的结合，相关成果已在中学教育场景中落地实践，推动教育理念的创新与转化。
+
+            在科研成果方面，实验室成员已在多个国际高水平期刊上发表了具有影响力的学术论文，研究工作获得广泛认可。实验室的毕业生遍布全球，多名博士毕业生任教于香港大学、四川大学等知名高校，硕士毕业生也在知名企业中担任关键岗位，充分展现了Betalab在科研创新与人才培养方面的综合实力。
+
+            同时，实验室积极开展国际合作，与来自英国、伊朗和挪威等国家的研究人员建立了长期、深入的合作关系，不断拓展全球学术交流的深度与广度。
+
+            Betalab将继续秉持严谨的科研精神与开放的合作态度，推动复杂性科学与教育研究的持续发展，探索未来科学的无限可能。
+          </p>
+        </div>
       </div>
     </div>
-    
-        
 
     <!-- News section -->
     <section class="gray-block" style="background: #f2f2f2; padding: 1rem; border-radius: 6px;">
