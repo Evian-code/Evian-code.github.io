@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.default_lang | default: 'zh' }}">
-{% include header.html %}
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,43 +13,29 @@
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{% if page.lang == 'en' %}{{ site.description }}{% else %}{{ site.description_zh }}{% endif %}{% endif %}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
 
+  <!-- 样式表：主样式 + 自定义响应式样式 -->
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
-  <!-- <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
-   -->
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
   {% seo %}
 </head>
 
 <body>
-
   <div class="wrapper">
 
-    <!-- 可选：语言切换按钮位置 -->
+    {% include header.html %}
+
+    <!-- 可选语言切换按钮 -->
     <div class="language-switcher" style="text-align: right; padding: 0.5rem 1rem;">
       {% include language-switcher.html %}
     </div>
 
     <div class="home-container" style="display: flex; gap: 2rem; padding: 1rem;">
-
       <!-- 主体内容 -->
       <main class="main-content" style="flex: 1; display: flex; flex-direction: column; gap: 2rem;">
-        <!-- 第一块：实验室简介 -->
         <section class="gray-block" style="background: #f2f2f2; padding: 1rem; border-radius: 6px;">
           {{ content }}
         </section>
-
-        <!-- 第二块：自动加载近期新闻 -->
-        <!-- <section class="gray-block" style="background: #f2f2f2; padding: 1rem; border-radius: 6px;">
-          <h3>{% if page.lang == 'en' %}Recent News{% else %}最新动态{% endif %}</h3>
-
-          <ul>
-            {% assign posts = site.posts | where_exp: "item", "item.lang == page.lang" | slice: 0, 3 %}
-            {% for post in posts %}
-              <li><a href="{{ post.url | relative_url }}">{{ post.date | date: "%Y-%m-%d" }} — {{ post.title }}</a></li>
-            {% endfor %}
-          </ul>
-        </section> -->
       </main>
-
     </div>
 
     {% include footer.html %}
@@ -58,6 +43,5 @@
   </div>
 
   <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
-  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
 </body>
 </html>
