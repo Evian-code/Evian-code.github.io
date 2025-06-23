@@ -26,6 +26,12 @@
 }
 
 /* 上部：Logo + 标题 */
+/* ===== 页面通用容器，和 footer 保持一致 ===== */
+.wrapper {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
 
 .header-top {
   background: white;
