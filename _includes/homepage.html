@@ -24,11 +24,14 @@
     <section class="gray-block" style="background: #f5f5f5; padding: 1.5rem; border-radius: 6px;">
       <h2 style="margin-top: 0;">{% if page.lang == 'en' %}About Us{% else %}关于我们{% endif %}</h2>
     
-      <div style="display: flex; gap: 1.5rem;">
-        <!-- 左侧：图片 -->
-        <img src="/assets/images/zhoutao.jpg" alt="张教授" style="width: 180px; border-radius: 8px; flex-shrink: 0;">
+      <div style="display: flex; align-items: flex-start; gap: 1.5rem;">
+        <!-- ✅ 左侧头像：不拉伸 -->
+        <div style="flex-shrink: 0;">
+          <img src="/assets/images/zhoutao.jpg" alt="张教授" style="width: 180px; border-radius: 8px; display: block;">
+          <div style="text-align: center; margin-top: 0.5rem; font-weight: bold;">张教授</div>
+        </div>
     
-        <!-- 右侧：介绍文字 -->
+        <!-- ✅ 右侧内容 -->
         <div style="line-height: 1.8; font-size: 1rem; color: #333;">
           {% if page.lang == 'en' %}
             {{ site.lab.about_en }}
