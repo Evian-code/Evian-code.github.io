@@ -348,7 +348,13 @@
   display: block;
   margin: 0 auto 10px;
 }
-
+.member-image-wrapper {
+  width: 160px;
+  height: 160px;
+  overflow: hidden;
+  border-radius: 8px;
+  margin: 0 auto 10px;
+}
 /* 名字与职位 */
 .member-name {
   font-weight: bold;
