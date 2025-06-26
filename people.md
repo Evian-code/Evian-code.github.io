@@ -11,7 +11,9 @@ lang: zh
   <div class="members-grid">
     {% for member in site.data.members.faculty %}
     <div class="member-card">
-      <img class="member-image" src="{{ member.image }}" alt="{{ member.name_zh }}">
+      <div class="member-image-wrapper">
+        <img class="member-image" src="{{ member.image }}" alt="{{ member.name_zh }}">
+      </div>
       <div class="member-name">{{ member.name_zh }}</div>
       <div class="member-position">{{ member.position_zh }}</div>
       <div class="member-bio bio-collapsed">{{ member.bio_zh }}</div>
@@ -31,7 +33,9 @@ lang: zh
   <div class="members-grid">
     {% for member in site.data.members.students %}
     <div class="member-card">
-      <img class="member-image" src="{{ member.image }}" alt="{{ member.name_zh }}">
+      <div class="member-image-wrapper">
+        <img class="member-image" src="{{ member.image }}" alt="{{ member.name_zh }}">
+      </div>
       <div class="member-name">{{ member.name_zh }}</div>
       <div class="member-position">{{ member.position_zh }}</div>
       <div class="member-bio bio-collapsed">{{ member.bio_zh }}</div>
@@ -48,7 +52,9 @@ lang: zh
   <div class="members-grid">
     {% for member in site.data.members.VisitingScholarsandRA %}
     <div class="member-card">
-      <img class="member-image" src="{{ member.image }}" alt="{{ member.name_zh }}">
+      <div class="member-image-wrapper">
+        <img class="member-image" src="{{ member.image }}" alt="{{ member.name_zh }}">
+      </div>
       <div class="member-name">{{ member.name_zh }}</div>
       <div class="member-position">{{ member.position_zh }}</div>
       <div class="member-bio bio-collapsed">{{ member.bio_zh }}</div>
@@ -65,7 +71,9 @@ lang: zh
   <div class="members-grid">
     {% for member in site.data.members.Alumni %}
     <div class="member-card">
-      <img class="member-image" src="{{ member.image }}" alt="{{ member.name_zh }}">
+      <div class="member-image-wrapper">
+        <img class="member-image" src="{{ member.image }}" alt="{{ member.name_zh }}">
+      </div>
       <div class="member-name">{{ member.name_zh }}</div>
       <div class="member-position">{{ member.position_zh }}</div>
       <div class="member-bio bio-collapsed">{{ member.bio_zh }}</div>
