@@ -94,12 +94,12 @@ VisitingScholarsandRA:
     image: '/assets/images/chenyuxi.jpg'
 
   - name: 'Chi Zhang'
-    name_zh: '张驰'
+    name_zh: '张弛'
     position: 'Research Assistant, Master’s Graduate, Columbia University'
     position_zh: '哥伦比亚大学硕士研究生（已毕业），研究助理'
     email: ''
     bio: 'Chi Zhang earned her Master’s degree from Columbia University and works as a research assistant in the lab. Her research interests include computational social science and complex networks.'
-    bio_zh: '张驰毕业于哥伦比亚大学硕士项目，现为实验室研究助理，研究方向包括计算社会科学与复杂网络。'
+    bio_zh: '张弛毕业于哥伦比亚大学硕士项目，现为实验室研究助理，研究方向包括计算社会科学与复杂网络。'
     image: '/assets/images/zhangchi.jpg'
 
   - name: 'Xinyu Jiang'
@@ -120,6 +120,14 @@ VisitingScholarsandRA:
     bio_zh: '罗与昕是华威大学2024级在读博士生，目前在实验室进行访问交流，研究方向为网络科学与算法建模。'
     image: '/assets/images/luoyuxin.jpg'
 
+  - name: 'Kasra Ghorbani Aghilabadi'
+    name_zh: 'Kasra Ghorbani Aghilabadi'
+    position: 'Visiting Scholar, PhD Student (Class of 2024), University of Warwick'
+    position_zh: '德黑兰大学2022级本科生（在读），访问学者'
+    email: ''
+    bio: 'Kasra Ghorbani Aghilabadi is an undergraduate student at the University of Tehran, currently visiting the lab. His research focuses on complex network dynamics.'
+    bio_zh: 'Kasra是德黑兰大学2022级本科生，目前在实验室进行访问交流，研究方向为复杂网络传播动力学。'
+    image: '/assets/images/Kasra.jpg'
 Alumni:
   - name: 'Yi Cao'
     name_zh: '曹奕'
