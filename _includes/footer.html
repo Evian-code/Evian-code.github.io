@@ -3,7 +3,6 @@
   
   <div class="wrapper">
       <div class="footer-content">
-      
           <div class="footer-col footer-col-1">
               <h3>{% if page.lang == 'en' %}Contact{% else %}联系方式{% endif %}</h3>
               <ul class="contact-list">
@@ -13,7 +12,13 @@
                   <li>{% if page.lang == 'en' %}Email{% else %}邮箱{% endif %}: <a class="u-email" href="mailto:{{ site.lab.email }}">{{ site.lab.email }}</a></li>
               </ul>
           </div>
-          
+
+          <!-- 新增一列用于显示 Clustrmaps -->
+          <div class="footer-col footer-col-3">
+              <h3>浏览量统计</h3>
+              <div id="clstr_globe_container" style="width: 200px; height: 200px; margin: 0 auto;"></div>
+          </div>
+
           <div class="footer-col footer-col-2">
               <h3>{% if page.lang == 'en' %}Follow Us{% else %}关注我们{% endif %}</h3>
               <ul class="social-media-list">
@@ -31,10 +36,6 @@
                   {% endif %}
               </ul>
           </div>
-          
-          <!-- <div class="footer-col footer-col-3">
-              <p>{% if page.lang == 'en' %}{{ site.description }}{% else %}{{ site.description_zh }}{% endif %}</p>
-          </div> -->
       </div>
       
       <div class="footer-bottom">
