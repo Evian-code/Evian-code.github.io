@@ -13,13 +13,14 @@
               </ul>
           </div>
 
-          <!-- 新增一列用于显示 Clustrmaps -->
-          <div class="footer-col footer-col-3">
-              <h3>浏览量统计</h3>
-              <div id="clstr_globe_container" style="width: 200px; height: 200px; margin: 0 auto;"></div>
-          </div>
+          <!-- 添加 Clustrmaps 列 -->
+        <div class="footer-col footer-col-2">
+            <h3>浏览量统计</h3>
+            <div id="clstr_globe_container" style="width: 15vw; height: 15vh;"></div>
+            <script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=sF3mvI0xAx7sNmd7n9EPw8H0l5lE8x38w-vH06L9RVg"></script>
+        </div>
 
-          <div class="footer-col footer-col-2">
+          <div class="footer-col footer-col-3">
               <h3>{% if page.lang == 'en' %}Follow Us{% else %}关注我们{% endif %}</h3>
               <ul class="social-media-list">
                   {% if site.social.github %}
@@ -42,6 +43,5 @@
           <p>&copy; {{ 'now' | date: "%Y" }} {% if page.lang == 'en' %}{{ site.lab.name }}{% else %}{{ site.lab.name_zh }}{% endif %}. {% if page.lang == 'en' %}All rights reserved.{% else %}版权所有。{% endif %}</p>
       </div>
   </div>
+
 </footer>
-<!-- 添加 Clustrmaps 统计插件 -->
-<script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=sF3mvI0xAx7sNmd7n9EPw8H0l5lE8x38w-vH06L9RVg"></script>
