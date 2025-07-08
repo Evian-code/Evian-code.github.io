@@ -63,7 +63,7 @@ students:
     email: ''
     bio: 'Jinmin Yang is a Master’s student at UESTC with interests in [...]'
     bio_zh: '杨金名是电子科技大学2025级硕士研究生，研究兴趣包括[...]。'
-    image: '/assets/images/yangjinmin.jpg'
+    image: '/assets/images/yangjinming.jpg'
 
   - name: 'Qiran Song'
     name_zh: '宋其燃'
