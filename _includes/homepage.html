@@ -34,20 +34,49 @@
     <section class="gray-block" style="background: #f2f2f2; padding: 1rem; border-radius: 6px; ">
       <h3>最新动态</h3>
     
-      <div class="news-card-container">
-        {% assign posts = site.posts | where_exp: "item", "item.lang == page.lang" | slice: 0, 3 %}
-        {% for post in posts %}
-          <div class="news-card">
-            <div class="news-image">
-              <img src="{% if post.image %}{{ post.image | relative_url }}{% else %}/assets/img/zhoutao.jpg{% endif %}" alt="{{ post.title }}">
-            </div>
-            <div class="news-date">{{ post.date | date: "%Y-%m-%d" }}</div>
-            <div class="news-title">
-              <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-            </div>
-          </div>
-        {% endfor %}
-      </div>
+      <div class="carousel-container">
+        <button class="carousel-btn prev">&#10094;</button>
+        <div class="carousel-track">
+            {% assign posts = site.posts | where_exp: "item", "item.lang == page.lang" | slice: 0, 3 %}
+            {% for post in posts %}
+                <div class="carousel-item">
+                    <a href="{{ post.url | relative_url }}" style="text-decoration: none; color: inherit;">
+                        <div class="carousel-image">
+                            <img src="{% if post.image %}{{ post.image | relative_url }}{% else %}/assets/img/zhoutao.jpg{% endif %}" alt="{{ post.title }}">
+                        </div>
+                        <div class="carousel-title">{{ post.title }}</div>
+                        <div class="carousel-date">{{ post.date | date: "%Y-%m-%d" }}</div>
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
+        <button class="carousel-btn next">&#10095;</button>
+    </div>
+
+    <script>
+        // 简单的手动轮播逻辑
+        const track = document.querySelector('.carousel-track');
+        const items = document.querySelectorAll('.carousel-item');
+        const prevBtn = document.querySelector('.carousel-btn.prev');
+        const nextBtn = document.querySelector('.carousel-btn.next');
+
+        let currentIndex = 0;
+
+        function updateCarousel() {
+            const offset = -currentIndex * 100;
+            track.style.transform = `translateX(${offset}%)`;
+        }
+
+        prevBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + items.length) % items.length;
+            updateCarousel();
+        });
+
+        nextBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % items.length;
+            updateCarousel();
+        });
+    </script>
     
       <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
     </section>
