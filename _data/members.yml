@@ -56,12 +56,12 @@ students:
     bio_zh: '邓振宇是电子科技大学2025级博士研究生，目前主要研究[...]。'
     image: '/assets/images/denzhenyu.jpg'
 
-  - name: 'Jinmin Yang'
+  - name: 'Jinming Yang'
     name_zh: '杨金名'
     position: 'Master’s Student (Class of 2025)'
     position_zh: '2025级硕士研究生'
     email: ''
-    bio: 'Jinmin Yang is a Master’s student at UESTC with interests in [...]'
+    bio: 'Jinming Yang is a Master’s student at UESTC with interests in [...]'
     bio_zh: '杨金名是电子科技大学2025级硕士研究生，研究兴趣包括[...]。'
     image: '/assets/images/yangjinming.jpg'
 
