@@ -127,7 +127,7 @@ VisitingScholarsandRA:
     email: ''
     bio: 'Kasra Ghorbani Aghilabadi is an undergraduate student at the University of Tehran, currently visiting the lab. His research focuses on complex network dynamics.'
     bio_zh: 'Kasra是德黑兰大学2022级本科生，目前在实验室进行访问交流，研究方向为复杂网络传播动力学。'
-    image: '/assets/images/Kasra.jpg'
+    image: '/assets/images/Kasra.png'
 Alumni:
   - name: 'Yi Cao'
     name_zh: '曹奕'
